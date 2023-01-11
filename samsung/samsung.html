@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>삼성재단</title>
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+<style>
+/* reset */
+html,body { height:100%; }
+body,div,p,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,form,fieldset,button,input { margin:0; padding:0; }
+body,h1,h2,h3,h4,input,button { font-size:12px; }
+ul,li,ol { list-style:none; }
+img,fieldset,iframe { border:0; }
+img { vertical-align:top; }
+table { border-collapse:collapse; }
+input {border:none; outline:none;}
+
+
+/* base */
+body { background: url(images/bg_01.jpg) center top no-repeat;/* 폰트설정 */ }
+.blind { position:absolute; top:-9999px; }
+
+
+/* layout */
+#header { height:98px; background:#fff; }
+#header .inner { position:relative; margin: 0 auto; width:1000px; height:98px;}
+
+#visual { /*position: relative;*/ margin:0 auto; width:1000px; height:678px;/* border:1px solid white;*/ }
+
+#contents {margin:0 auto; width:1000px; height:116px; background:#fff;/* border:1px solid yellow; */ }
+
+#footer { height: 83px; background:rgba(0,0,0,0.1);/*border:1px solid pink;*/ }
+#footer .inner {  position:relative; margin: 0 auto; width:1000px; height:83px; background:#dcdcdc; /*border:1px dashed lightyellow;*/}
+
+
+/* header */
+#header .logo { position:absolute; left:10px; top:34px;}
+
+#header .gnb {position:absolute; left:284px; top:44px;}
+#header .gnb:after { content:""; display:block; clear:both; }
+#header .gnb li { float:left; margin-right:55px;}
+#header .gnb li:last-child {margin-right:0px;}
+
+#header .top {position:absolute; right:79px; top:23px;}
+#header .top:after { content:""; display:block; clear:both; }
+#header .top li{ float:left; margin-right:5px;}
+#header .top li:last-child {margin-right:0px;}
+
+#header .eng { position:absolute; right:10px; top:17px;}
+
+#header .search { position:absolute; right:10px; top:44px; }
+#header .search #s1 {
+	float:left; width:72px; height:24px;
+	background:url(images/s_1.jpg) no-repeat;
+	padding-left:10px;
+}
+/* visual */
+#visual .box {position:relative;}
+#visual .news {position:absolute; left:36px; top:343px;}
+
+/* contents */
+#contents :after { content:""; display:block; clear:both; }
+#contents .con li {float:left;margin-top:24px; margin-right:25px;}
+#contents .con li:nth-child(1) {margin-left:35px; margin-right:25px;}
+
+/*#contents .con li:nth-child(2) {margin-right:25px;}
+#contents .con li:nth-child(3) {margin-right:25px;}*/
+
+/* footer */
+#footer .inner { overflow:hidden;}
+
+#footer .f1 li {float:left; margin-top:16px; margin-right:7px;}
+#footer .f1 li:nth-child(1) {margin-left:35px; margin-right:8px;} 
+
+/*#footer .f1 li:nth-child(2) { margin-right:7px;} 
+#footer .f1 li:nth-child(3) { margin-right:7px;} 
+#footer .f1 li:nth-child(4) { margin-right:7px;} */
+
+#footer .face {position:absolute; right:186px; top:11px;}
+#footer .site {position:absolute; right:36px; top:11px;}
+#footer .copy {position:absolute; left:36px; top:39px;}
+
+</style>
+</head>
+
+<body>
+
+
+
+
+
+<header id="header">
+	
+	<div class="inner">
+
+			<div class="logo"><a href="#"><img src="images/logo.jpg" alt="SANSUNG삼성재단"></a></div>
+
+			<div class="gnb">
+				<ul>
+					<li><a href="#"><img src="images/gnb_1.jpg" alt="재단소개"></a></li>
+					<li><a href="#"><img src="images/gnb_2.jpg" alt="문화예술사업"></a></li>
+					<li><a href="#"><img src="images/gnb_3.jpg" alt="복지공익사업"></a></li>
+					<li><a href="#"><img src="images/gnb_4.jpg" alt="상찬사업"></a></li>
+				</ul>
+			</div>
+		
+			<div class="top">
+				<ul>
+					<li><a href="#"><img src="images/top_1.jpg" alt="LOGIN"></a></li>
+					<li><a href="#"><img src="images/top_2.jpg" alt="JOIN US"></a></li>
+					<li><a href="#"><img src="images/top_3.jpg" alt="NEWS"></a></li>
+					<li><a href="#"><img src="images/top_4.jpg" alt="FAQ"></a></li>
+					<li><a href="#"><img src="images/top_5.jpg" alt="CANTACT US"></a></li>
+				</ul>
+			</div>
+
+			<div class ="eng">
+				<a href="#"><img src="images/top_6.jpg" alt="ENGLISH"></a>
+			</div>
+	
+			<div class="search">
+				<form>
+					<fieldset>
+						<legend class =" blind"> 통합검색</legend>
+							<label for="s1" class="blind">검색어 입력</label>
+							<input type="text" id ="s1">
+							<input type="image" src="images/s_2.jpg" alt="검색"	>
+					</fieldset>
+				</form>			
+			</div>
+
+	
+
+	</div>
+</header>
+
+
+
+
+
+
+<nav id="visual">
+	
+	<div class="box">
+			
+			<img src="images/box.png" alt="CULTURE ARTS PROJECT 문화예술사업 다양한 문화예술 지원사업을 통해 인재를 양성하고 문화의 가지를 높여 우리 문화 예술의 셰계화에 앞장섭니다. WHAT'S NEW">
+			
+			<ul class="news">
+				<li><a href="#"><img src="images/n_1.png" onmouseover="src='images/ov_n_1.png'"
+				onmouseout="src='images/n_1.png'" alt="2020 상반기 리움강좌<안모적 오브,,,"></a></li>
+				<li><a href="#"><img src="images/n_2.png" onmouseover="src='images/ov_n_2.png'"
+				onmouseout="src='images/n_2.png'" alt="매달 마지막 수요일은 '문화가 있는 날,,,"></a></li>
+				<li><a href="#"><img src="images/n_3.png" onmouseover="src='images/ov_n_3.png'"
+				onmouseout="src='images/n_3.png'" alt="[중 고등 교사초청 설명회] 상설전 ,,,"></a></li>
+			</ul>
+	</div> 
+
+</nav>
+
+
+
+
+
+
+<section id= "contents" >
+		
+		<ul class="con">
+			<li><a href=""><img src="images/con_1.jpg" alt="삼성미술관 Leeum Leeum,SAMSUNG Museum of Art 한국 문화예술 발전에 중추적 역할	"></a></li>
+			<li><a href=""><img src="images/con_2.jpg" alt="삼성어린이집 SAMSUNG Childcare Centers 아이들의 전인적 발달을 지향하는 교육의 장소"></a></li>
+			<li><a href=""><img src="images/con_3.jpg" alt="호암상 The HO-AM Prize 사회 각 분야 발전에 공헌한 인사에게 수여"></a></li>
+			<li><a href=""><img src="images/con_4.jpg" alt="삼성행복대상 SAMSUNG Happiness for Tomorrow Award 행복한 사회를 만들어 가는 분들에게 수여"></a></li>
+		</ul>
+	
+
+</section>
+
+
+
+
+
+
+<footer id="footer">
+	<div class="inner">
+	
+		<ul class="f1">
+			<li><a href="#"><img src="images/f_1.jpg" alt="이용약관"></a></li>
+			<li><a href="#"><img src="images/f_2.jpg" alt="개인정보취급방침"></a></li>
+			<li><a href="#"><img src="images/f_3.jpg" alt="법적고지"></a></li>
+			<li><a href="#"><img src="images/f_4.jpg" alt=" 사이트맵"></a></li>
+			<li><a href="#"><img src="images/f_5.jpg" alt="이메일무단수집거부"></a></li>
+		</ul>
+
+		<div class="face">
+			<a href="#"><img src="images/f_6.jpg" alt="삼성재단 페이스북"></a>
+		</div>
+
+		<div class="site">
+			<a href="#"><img src="images/f_7.jpg" alt="Related site"></a>
+		</div>
+
+		<div class ="copy">
+			<img src="images/f_8.jpg" alt="140-893 서울특별시 용산구 이태원로 55길 60-16 (c)SAMSUNG FOUNDATION. ALL RIGHTS RESERVED">
+		</div>
+	</div>
+</footer>
+
+
+
+
+</body>
+</html>
+
+
+
+
+
+
