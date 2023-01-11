@@ -1,0 +1,483 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>portfolio</title>
+
+<!-- 구글 웹폰트(fonts.google.com) -->
+<link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200;300;400;600;700;900&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/deflaut.css">
+
+
+<script src="http://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+
+<script>
+$(function(){
+
+	//페이지내 링크 위치로 스크롤을 애니메이트 이동
+	$(".gnb a, h1 a").click(function(){ //페이지내 링크 대상
+		var target = $($(this).attr("href")).offset().top
+		$("html,body").animate({scrollTop:target},
+		1000, //속도(1000=1초)
+		"easeInOutQuint");
+		return false;
+	});
+
+
+		////////// 레이어 팝업 /////////////////////////
+	  $('.menu').click(function(){//각 메뉴를 클릭했을때
+		  $(this).next().show();	  //이 다음 형제인  .pop을 보이게함
+		  $('body').css({overflow:"hidden"});//스크롤없앰
+		  return false;
+	  });	  
+	  
+	  $('.close').click(function(){//close눌렀을때
+		  $('.pop').hide(); //.pop을 안보이게함
+		  $('body').css({overflow:"auto"});//body스크롤생김
+		  return false;
+	  });
+
+
+	$(window).scroll(function(){ //스크롤하는동안
+
+			var sc = $(this).scrollTop();//얼마만큼 스크롤했는지의 값
+			$("#tt").text(sc);
+
+			if ( sc>1700  &&  sc<2700 ) {
+				$(".b1 .fill").css({ width:"90%"});
+				$(".b2 .fill").css({ width:"90%"});
+				$(".b3 .fill").css({ width:"80%"});
+				$(".b4 .fill").css({ width:"60%"});
+			}
+			else {
+				$(".b1 .fill").css({ width:"0%"});
+				$(".b2 .fill").css({ width:"0%"});
+				$(".b3 .fill").css({ width:"0%"});
+				$(".b4 .fill").css({ width:"0%"});
+			}
+
+	});
+
+});
+
+</script>
+
+</head>
+<body>
+
+<!--<div id="tt" style="position:fixed; left:0px; top:200px; background:black; color:white; font-size:33px;">스크롤값</div>-->
+
+<div class="skip">
+	
+	<a href="#about">about 바로가기</a>
+	<a href="#portfolio">portfolio 바로가기</a>
+	<a href="#contact">contact 바로가기</a>
+</div>
+
+
+<header> <!-- ///////// header /////////////////////////// -->
+  
+  <div class="inner">
+  
+        <div class ="logo"><a href="#home"><img src="images/logo_01.png" alt="">	</a></div>
+        
+        <nav class="gnb">
+              <ul>
+                <li><a href="#home"><img src="images/home.png" onmouseover="src='images/home_on.png'"
+				onmouseout="src='images/home.png'" alt="home"></a></li>
+                <li><a href="#about"><img src="images/about.png" onmouseover="src='images/about_on.png'"
+				onmouseout="src='images/about.png'" alt="about"></a></li>
+                <li><a href="#portfolio"><img src="images/portfolio.png" onmouseover="src='images/portfolio_on.png'"
+				onmouseout="src='images/portfolio.png'" alt="portfolio"></a></li>
+                <li><a href="#contact"><img src="images/contact.png" onmouseover="src='images/contact_on.png'"
+				onmouseout="src='images/contact.png'" alt="contact"></a></li>
+              </ul>
+        </nav>
+    
+  </div>
+
+</header>
+
+
+
+
+
+<div id="home"> <!-- ///////// home /////////////////////////// -->
+  <div class="inner">
+  
+        <div class="slogan">
+             <img src="images/sg_01.png" alt="lee jeoung hwa"> 
+        </div>
+    
+  </div>
+</div>
+
+
+
+
+<section id="about">  <!-- ///////// about /////////////////////////// -->
+	<div class="inner">
+	
+		<div class="ab">
+			<img  src="images/ab.png"  alt="about 이정화 사진  web designer lee jeoung hwa 1995.02.22 haman-si,gyeonggi-do fine art oriental painting skill ">
+         </div>    
+
+		 <div class="bar_group">
+				
+				<img src="images/ab_ph.jpg" alt="photoshop">
+				<div class ="bar b1"><div class="fill"></div></div>
+				
+				<img src="images/ab_il.jpg" alt="illustraor">
+				<div class ="bar b2"><div class="fill"></div></div>
+				
+				<img src="images/ab_ht.jpg" alt="html/css">
+				<div class ="bar b3"><div class="fill"></div></div>
+				
+				<img src="images/ab_jv.jpg" alt="javascript / jquery">
+				<div class ="bar b4"><div class="fill"></div></div>
+		 </div>
+
+	   <div class="page">
+		<img src="images/01.png" alt="01">
+	  </div>
+
+  </div>
+</section>
+
+
+
+
+
+<section id="portfolio"> <!-- ///////// portfolio /////////////////////////// -->
+  <div class="inner">
+  
+        <div class="pt">
+			<img src="images/pt.png" alt="portfolio">
+		</div>
+        
+		<div class="pt_sg">
+			<img src="images/pt_sg.png" alt="I make higer quality products width various development idea">
+		</div>
+
+				<div class ="category">                      <!----------web design-------------->
+					<img src="images/web.png" alt="web design"> 
+				</div>
+
+				<ul>
+				
+
+					  <li>
+							<div class="thum menu">
+								<a href="#">
+									<img src="images/loc.jpg" alt="loccitane">
+									<div class="ov"><img src="images/images/ov_loc.png" alt="L'OCCITANE을 디자인한 웹사이트입니다."></div>
+								</a>
+							</div>
+
+							  <div class="pop">
+								  <div class="c1">
+									 <img src="images/work/loc_1.jpg" alt="L'OCCITANE 사이트 메인 페이지를 리뉴얼하여 비주얼 영역 넓히고 깔끔한 느낌으로 웹디자인 했습니다.">
+									 <br>
+									  <img src="images/work/loc_2.jpg" alt="L'OCCITANE 사이트 서브 페이지를 리뉴얼하여 제품에 시선이 더욱 중점 되도록 무채색활용해서 웹디자인했습니다. .">
+								  </div>
+								  <a href="#" class="close"><img src="images/close.png" alt="close"></a>
+							  </div>  
+					  </li>
+					  
+					
+ 					  <li>
+							<div class="thum menu">
+								<a href="#">
+									<img src="images/w_star.jpg" alt="starbucks">
+									<div class="ov"><img src="images/images/ov_w_star.png" alt="STARBUCKS를 디자인한 웹사이트입니다."></div>
+								</a>
+							</div>
+
+							  <div class="pop">
+								  <div class="c1 short">
+									 <img src="images/work/starbucks_1.jpg" alt="그리들을 활용하여 starbucks 사이트를 리뉴얼 웹디자인했습니다.">
+									 <br>
+									  <img src="images/work/starbucks_2.jpg" alt="그리들을 활용하여 starbucks 사이트를 리뉴얼 웹디자인했습니다.">
+									<br>
+									  <img src="images/work/starbucks_3.jpg" alt="그리들을 활용하여 starbucks 이벤트사이트를 리뉴얼 웹디자인했습니다.">
+								  </div>
+								  <a href="#" class="close"><img src="images/close.png" alt="close"></a>
+							  </div>  
+					  </li>
+			        
+
+					   <li>
+							<div class="thum menu">
+								<a href="#">
+									<img src="images/studio.jpg" alt="studio dragon">
+									<div class="ov"><img src="images/images/ov_stu.png" alt="studio dragon을 디자인한 웹사이트입니다."></div>
+								</a>
+							</div>
+
+							  <div class="pop">
+								  <div class="c1 short">
+									 <img src="images/work/studod_main_a.jpg" alt="studio dragon의 메인 A 페이지를 모듈그리들 활용하였고 텍스트보단 이미지중점으로 디자인 하였습니다. ">
+									 <img src="images/work/studod_sub_a.jpg" alt="studio dragon의 서브 A 페이지를 모듈그리들 활용하여 웹디자인 하였습니다.">
+									  <br><br>
+									
+									  <img src="images/work/studod_main_b.jpg" alt="studio dragon의 메인 B 페이지를 모듈그리들 활용하였고 텍스트보단 이미지중점으로 디자인 하였습니다.">
+									  <img src="images/work/studod_sub_b.jpg" alt="studio dragon의 서브 B 페이지를 모듈그리들 활용하여 웹디자인 하였습니다.">
+								  </div>
+								  <a href="#" class="close"><img src="images/close.png" alt="close"></a>
+							  </div>  
+							
+					  </li>     
+
+					  <li>
+							<div class="thum menu">
+								<a href="#">
+									<img src="images/ysl.jpg" alt="ysl">
+									<div class="ov"><img src="images/images/ov_ysl.png" alt="YSL을 디자인한 웹사이트 입니다."></div>
+								</a>
+							</div>
+
+							  <div class="pop">
+								  <div class="c1 short">
+									 <img src="images/work/ysl_1.jpg" alt="YSL웹사이트는 무채색을 적용하고 제품색상을 돋보이게 디자인하였습니다. ">
+								  </div>
+								  <a href="#" class="close"><img src="images/close.png" alt="close"></a>
+							  </div>  
+						
+					  </li>
+
+					  <li>
+							<div class="thum menu">
+								<a href="#">
+									<img src="images/gung.jpg" alt="흥례문">
+									<div class="ov"><img src="images/images/ov_gung.png" alt=" 문화재청을 디자인한 웹사이트입니다. "></div>
+								</a>
+							</div>
+
+							  <div class="pop">
+								  <div class="c1 short">
+									 <img src="images/work/gung_1.jpg" alt="경복궁의 흥례문을 풀배경으로 넣고, top gnb 의 언더바에 오방색을 넣어 한국의 색감을 표현하여 디자인하였습니다.">
+								  </div>
+								  <a href="#" class="close"><img src="images/close.png" alt="close"></a>
+							  </div>  
+						
+					  </li>
+					  
+					
+ 					  <li>
+							<div class="thum menu">
+								<a href="#">
+									<img src="images/m_star.jpg" alt="starbucks모바일">
+									<div class="ov"><img src="images/images/ov_m_star.png" alt="starbucks를 디자인한 모바일사이트입니다."></div>
+								</a>
+							</div>
+
+							  <div class="pop">
+								  <div class="c1 short">
+									 <img src="images/work/m_star_1.png" alt=" 스타벅스의 사이렌 오더에 중점을 두어 보기 편하게 간결한 텍스트로 넣고 이미지는 필요한 제품이미지만 넣어 디자인하였습니다.">
+								  </div>
+								  <a href="#" class="close"><img src="images/close.png" alt="close"></a>
+							  </div>
+					  </li>            
+
+					   <li>
+					
+							<div class="thum">
+								<a href="images/work/w_port_3.jpg" target="_blank">
+									<img src="images/w_port.jpg" alt="포트폴리오 웹디자인">
+									<div class="ov"><img src="images/images/ov_port.png" alt="포트폴리오를 디자인한 웹사이트입니다. "></div>
+								</a>
+							</div>
+						<!-- 	<div class="thum menu">
+								<a href="#">
+									<img src="images/w_port.jpg" alt="포트폴리오 웹디자인">
+									<div class="ov"><img src="images/images/ov_port.png" alt="포트폴리오를 디자인한 웹사이트입니다"></div>
+								</a>
+							</div>
+
+							 <div class="pop">
+								  <div class="c1 short">
+									 <img src="images/work/w_port_3.jpg" alt="포트폴리오 시안입니다. 3단 그리드를 활용하였고 무채색에 포인트 색상을 사용하고, 전체적으로 배경에 점점 작아지는 사각형도형을 넣어 원근감 느낌을 표현하여 디자인하였습니다.">
+								  </div>
+								  <a href="#" class="close"><img src="images/close.png" alt="close"></a>
+							  </div>-->
+							
+					  </li> 
+
+											 
+				</ul>
+
+				<div class ="category">                   <!-----------coding-------------->
+					<img src="images/coding.png" alt="coding">
+				</div>
+
+				<ul>
+				
+
+					  <li>
+							<div class="thum">
+								<a href="http://beth0307.woobi.co.kr/miseen" target="_blank">
+									<img src="images/c_mi.jpg" alt="미쟝센">
+									<div class="ov"><img src="images/images/ov_mi.png" alt="미쟝센을 코딩한 웹사이트입니다."></div>
+								</a>
+							</div>
+							
+					  </li>
+					  
+								   
+
+					  <li>
+							<div class="thum">
+								<a href="http://beth0307.woobi.co.kr/samsung" target="_blank">
+									<img src="images/sam.jpg" alt="SAMSUNG 삼성재단">
+									<div class="ov"><img src="images/images/ov_sam.png" alt="삼성재단을 코딩한 웹사이트입니다."></div>
+								</a>
+							</div>
+							
+					  </li>            
+
+				<!--	   <li>
+							<div class="thum">
+								<a href="images/nike.jpg" target="_blank">
+									<img src="images/thum2.png" alt="디자인 작품">
+									<div class="ov">design</div>
+								</a>
+							</div>
+							
+					  </li>     -->
+
+											 
+				</ul>
+
+			
+
+				<div class ="category"> <!-----------------etc--------------------->
+					<img src="images/etc.png" alt="etc">
+				</div>
+
+				<ul>
+				
+
+					  <li>
+							<div class="thum menu">
+								<a href="#">
+									<img src="images/logo.jpg" alt="logo">
+									<div class="ov"><img src="images/images/ov_logo.png" alt="로고 디자인 작품입니다."></div>
+								</a>
+							</div>
+
+							  <div class="pop">
+								  <div class="c1">
+									 <img src="images/work/logo-2.jpg" alt="illustrator 프로그램을 사용해 이름 이니셜로 로고를 디자인하였습니다.">
+								  </div>
+								  <a href="#" class="close"><img src="images/close.png" alt="close"></a>
+							  </div>
+					  </li>
+				  					   
+					  <li>
+							<div class="thum menu">
+								<a href="#">
+									<img src="images/typo.jpg" alt="타이포그래피">
+									<div class="ov"><img src="images/images/ov_typo.png" alt=" 타이포 그래피 작품입니다."></div>
+								</a>
+							</div>
+
+							  <div class="pop">
+								  <div class="c1">
+									 <img src="images/work/typo_2.jpg" alt="phoposhop 프로그램을 사용하한 타이포 그래피 작품입니다">
+								  </div>
+								  <a href="#" class="close"><img src="images/close.png" alt="close"></a>
+							  </div>
+							
+					  </li>            
+
+					   <li>
+							<div class="thum menu">
+								<a href="#">
+									<img src="images/line_1.jpg" alt="라인일러스트">
+									<div class="ov"><img src="images/images/ov_line.png" alt="라인을 활용한 작품입니다. "></div>
+								</a>
+							</div>
+
+							  <div class="pop">
+								  <div class="c1">
+									 <img src="images/work/line_1.jpg" alt="illustrator 프로그램을 사용한 라인일러스트입니다.">
+								  </div>
+								  <a href="#" class="close"><img src="images/close.png" alt="close"></a>
+							  </div>
+						 </li>     
+
+					   <li>
+							<div class="thum menu">
+								<a href="#">
+									<img src="images/moran.jpg" alt="모란도">
+									<div class="ov"><img src="images/images/ov_moran.png" alt="일러스트레이터를 활용한 작품입니다."></div>
+								</a>
+							</div>
+
+							  <div class="pop">
+								  <div class="c1">
+									 <img src="images/work/moran_1.jpg" alt="illustrator 프로그램을 사용하여 모란도작품입니다.">
+								  </div>
+								  <a href="#" class="close"><img src="images/close.png" alt="close"></a>
+							  </div>
+						 </li>   									 
+
+					<!--	   <li>
+						<div class="thum">
+								<a href="images/work/moran_1.jpg" target="_blank">
+									<img src="images/thum2.png" alt="디자인 작품">
+									<div class="ov">design</div>
+								</a>
+							</div>
+						 </li>    -->
+				</ul>
+
+		<div class="page">
+		<img src="images/02.png" alt="02">
+		</div>
+
+
+  </div>
+</section>
+
+
+
+
+
+<section id="contact"> <!-- ///////// contact /////////////////////////// -->
+  <div class="inner">
+  
+        <div class="con">
+			<img src="images/conet.png" alt="contact e-mail beth0307#naver.com H.P. 010 . 2295 . 1695	">
+		</div>
+        
+		<div class ="page">
+			<img src="images/03.png" alt="03">
+		</div>
+    
+  </div>
+</section>
+
+
+
+
+
+<footer> <!-- ///////// footer /////////////////////////// -->
+  <div class="inner">
+  
+       <div>
+		<img class="copyright" src="images/copy.png" alt="copyright (c) 2021 my portfolio by JH all right reserved.">
+	   </div>
+    
+  </div>
+</footer>
+
+
+
+
+
+</body>
+</html>
+
