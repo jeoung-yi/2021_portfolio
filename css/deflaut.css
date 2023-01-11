@@ -1,0 +1,140 @@
+
+/* reset */
+html,body { height:100%; }
+body,div,p,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,form,fieldset,button,input { margin:0; padding:0; }
+body,h1,h2,h3,h4,input,button { font-size:12px; }
+ul,li,ol { list-style:none; }
+img,fieldset,iframe { border:0; }
+img { vertical-align:top; }
+table { border-collapse:collapse; }
+
+
+
+/* base */
+body { font-size:14px; font-family:'Titillium Web'; font-weight:600; color:#fff; }
+a { text-decoration:none; color:#fff; }
+.blind { position:absolute; top:-9999px; }
+.skip a { position:absolute; top:-9999px; }
+.skip a:focus { top:0px; }
+
+
+/* layout */
+header { position:fixed; left:0px; top:0px; z-index:1000; width:100%; background-color: rgba(255,255,255,0.1); /*border:3px dashed yellow;*/ }
+header .inner { position:relative; margin: 0 auto; width:1200px; height:101px; /*border:1px dashed #777;*/ }
+
+#home { background:url(../images/mbg_01.jpg);
+	background-repeat:no-repeat;
+	background-position:center top;
+	background-attachment:fixed;
+}
+
+#home .inner { 
+		margin:0 auto; width:1200px; 
+		padding-top:197px;
+		padding-bottom:343px;
+}
+	
+#about { background:#ac504a; }
+#about .inner { position:relative; margin:0 auto; width:1200px;/* padding-top:270px; padding-bottom:450px; border:1px dashed #777;*/ }
+
+#portfolio {  background:#fa8f87; }
+#portfolio .inner { margin: 0 auto; width:1200px; padding-bottom:0px; /*border:1px dashed #777;*/ }
+
+#contact { background:url(../images/cbg.jpg);
+					background-repeat:no-repeat;
+					background-position:center top;
+					background-attachment:fixed;
+}
+
+#contact .inner { 	margin: 0 auto; width:1200px; }
+
+footer { background:#db483e; }
+footer .inner { margin:0 auto; width:1200px; text-align:center; }
+
+
+
+/* header */
+.logo  { position:absolute; left:0px; top:17px; font-size:36px; }
+.gnb { position:absolute; right:15px; top:75px; }
+.gnb li { float:left; margin-left:30px; }
+
+
+
+/* home */
+#home .slogan {padding-left:15px;}
+
+
+
+/* about */
+#about .ab { padding-left:15px; padding-top:315px; padding-bottom:231px;}
+
+ .bar_group { position:absolute; left:814px; top:615px; background:#ac504a; width:370px; text-align:center; }
+
+ .bar { width:100%; height:20px; border:1px solid white; border-radius:5px; margin-top:8px;margin-bottom:13px; }
+
+ .bar .fill { transition:1s; width: 0%; height:100%; background:white; }
+
+#about .page { 
+		padding-left:581px;
+		padding-bottom:218px;
+}
+
+
+/* portfolio */
+#portfolio .pt {  padding-top:299px; padding-bottom:40px; text-align:center;}
+#portfolio .pt_sg {text-align:center; padding-bottom:40px;}
+#portfolio .category {padding-left:15px; padding-bottom:63px;padding-top:153px;}
+
+#portfolio .page {margin-left:581px; margin-top:210px; padding-bottom:218px;}
+
+#portfolio ul:after { content:""; display:block; clear:both; }
+#portfolio ul li { float:left; width:33.33%; margin-bottom:30px; /* border:1px dashed #ccc; box-sizing:border-box안쪽테두리*/;  }
+#portfolio ul li p { padding-top:20px; color:#333; text-align:center; font-size:12px; }
+#portfolio ul li p strong { font-size:14px; }
+
+#portfolio ul li .thum { 
+	
+	position:relative; 
+	margin:0 auto; 
+	width:370px; height:370px; 
+	text-align: center; 
+	background:#999;
+}
+
+#portfolio ul li .thum .ov { 
+	transition:0.5s; 
+	opacity:0;
+	position:absolute; left:0px; top:0px;
+	width:370px; height:370px; 
+	background-color:rgba(0,0,0,0.8);
+}
+
+#portfolio ul li .thum .ov img { margin-top:165px;}
+
+#portfolio ul li .thum:hover .ov { opacity:1;}
+
+		/* 팝업 박스 */
+		.pop { 
+			display:none; 
+			position:fixed; 
+			left:0px; top:0px;
+			width:100%; height:100%; 
+			background:rgba(0,0,0,0.8); 
+			z-index:3000;
+			overflow:auto;
+		}
+
+		.close { position:fixed; right:8%; top:30px; color:#fff; }
+
+		.c1 img { display:block; margin:0 auto; width:960px;  }
+
+		.short  img { margin-top: 3%;}
+
+
+/* contact */
+#contact .con {padding-top:342px; padding-bottom:65px;}
+#contact .page { padding-left:581px; padding-bottom:149px; }
+
+
+/* footer */
+footer .copyright { padding-top:40px; padding-bottom:41px;  }
