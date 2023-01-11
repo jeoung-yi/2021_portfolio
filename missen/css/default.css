@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+
+/* reset */
+html,body { height:100%; }
+body,div,p,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,form,fieldset,button,input { margin:0; padding:0; }
+body,h1,h2,h3,h4,input,button { font-size:12px; }
+ul,li,ol { list-style:none; }
+img,fieldset,iframe { border:0; }
+img { vertical-align:top; }
+table { border-collapse:collapse; }
+
+
+/* base */
+body { font:11px,'Noto Sans KR';}
+.blind { position:absolute; top:-9999px; }
+.skip_navigation a { position:absolute; top:-9999px; }
+.skip_navigation a:focus { top:0px; }
+
+/* layout */
+#header { background-image:url(../images/header_bg.gif); }
+#header .inner { position:relative; margin:0 auto; width:990px; height:114px;}
+
+#visual { 
+	margin-top:40px; 
+	background-image:url(../images/visual_bg.jpg); 
+	background-repeat:no-repeat; 
+	background-position:center top; 
+}
+#visual .inner { 
+		position:relative; margin:0 auto; width:990px; 
+		height:534px;margin-bottom:10px;
+}
+
+#contents {  margin:0 auto; width:990px; margin-bottom:40px;}
+
+#footer { 	background-color:black; }
+#footer .inner { margin:0 auto; width:990px; height:149px;}
+
+
+/* header */
+
+h1 { position:absolute; left:0px; top:0px; }
+
+.gnb { position:absolute; right:0px; top:77px;}
+.gnb li { float:left; margin-left: 79px; }
+
+.top_gnb { position:absolute; right:0px; top:30px;}
+.top_gnb li { float:left; margin-left: 15px; }
+
+/* visual */
+
+.typo {padding-top:124px;}
+
+/* contents */
+
+.group1:after { content:""; display:block; clear:both; }
+.group1 .banner1 { float: left; margin-right:10px; }
+.group1 .banner2 { float: left; margin-right:10px; }
+.group1 .banner3 { float: left; margin-right:10px; }
+
+.group2:after { content:""; display:block; clear:both; }
+.group2 .banner5 { float: left; margin-right:10px; margin-top:10px;}
+.group2 .banner6 { float: left; margin-right:10px; margin-top:10px;}
+.group2 .banner7 { float: left; margin-top:10px; }
+
+
+/* footer */
+
+.copyright {  padding-top:49px; color:#b8b8b8;}
